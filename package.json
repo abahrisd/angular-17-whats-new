@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular-17-whats-new": "node dist/angular-17-whats-new/server/server.mjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "storybook": "ng run angular-17-whats-new:storybook",
+    "build-storybook": "ng run angular-17-whats-new:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +35,14 @@
     "@angular-devkit/build-angular": "^17.1.1",
     "@angular/cli": "^17.1.1",
     "@angular/compiler-cli": "^17.1.0",
+    "@compodoc/compodoc": "^1.1.23",
+    "@storybook/addon-docs": "^7.6.13",
+    "@storybook/addon-essentials": "^7.6.13",
+    "@storybook/addon-interactions": "^7.6.13",
+    "@storybook/addon-links": "^7.6.13",
+    "@storybook/angular": "^7.6.13",
+    "@storybook/blocks": "^7.6.13",
+    "@storybook/test": "^7.6.13",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
@@ -44,6 +54,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-storybook": "^0.6.15",
     "husky": "^9.0.10",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
@@ -55,6 +66,9 @@
     "postcss": "^8.4.33",
     "prettier": "3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.13",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   },
