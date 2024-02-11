@@ -1,26 +1,28 @@
-<mat-drawer-container class="example-container mat-typography">
-  <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+<mat-drawer-container class="h-full w-full">
+  <mat-drawer
+    #drawer
+    mode="side"
+    disableClose="true"
+    [opened]="isOpened"
+    class="w-52"
+  >
     <mat-nav-list>
-      <mat-list-item>
-        <mat-icon mat-list-icon>person</mat-icon>
-        <h4>Person</h4>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon mat-list-icon>assignment</mat-icon>
-        <h4>Assignment</h4>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon mat-list-icon>domain</mat-icon>
-        <h4>Domain</h4>
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon mat-list-icon>folder_shared</mat-icon>
-        <h4>Folder shared</h4>
-      </mat-list-item>
+      @for (navItem of navigationConfig; track navItem.title) {
+        <mat-list-item class="flex flex-row">
+          <div class="flex flex-row">
+            <mat-icon mat-list-icon>{{ navItem.icon }}</mat-icon>
+            <a
+              class="mx-2 cursor-pointer p-2 text-lg"
+              routerLink="{{ navItem.routerLink }}"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+              >{{ navItem.title }}</a
+            >
+          </div>
+        </mat-list-item>
+      }
     </mat-nav-list>
   </mat-drawer>
 
-  <div class="example-sidenav-content">
-    <hello></hello>
-  </div>
+  <ng-content></ng-content>
 </mat-drawer-container>

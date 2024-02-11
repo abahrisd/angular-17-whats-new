@@ -45,20 +45,28 @@
   }
 </style>
 
-<div class="m-4">
-  <nav class="flex">
-    @for (link of links; track link.routerLink) {
-      <a
-        class="m-2 cursor-pointer bg-stone-400 p-2 text-lg"
-        routerLink="{{ link.routerLink }}"
-        routerLinkActive="active"
-        ariaCurrentWhenActive="page"
-        >{{ link.name }}</a
-      >
-    }
-  </nav>
+<div class="h-screen w-screen">
+  <mat-toolbar color="primary">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="toggleNavigationOpenedState()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="shrink grow"></span>
+  </mat-toolbar>
 
-  <div class="root-container">
-    <router-outlet />
-  </div>
+  <awn-side-navigation
+    [navigationConfig]="navigationConfig"
+    [isOpened]="isNavigationOpened"
+  >
+    <div class="m-4">
+      <div class="root-container">
+        <router-outlet />
+      </div>
+    </div>
+  </awn-side-navigation>
 </div>
