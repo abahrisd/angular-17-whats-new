@@ -1,0 +1,17 @@
+:host {
+  .side-navigation__container {
+    --visible-drawer-space: 55px;
+  }
+
+  .mat-drawer {
+    &.mat-drawer-side {
+      transform: translate3d(calc(-100% + var(--visible-drawer-space)), 0, 0);
+      visibility: visible !important; // always visible
+      display: block !important;
+    }
+  }
+
+  .mat-sidenav-content__closed {
+    margin-left: var(--visible-drawer-space);
+  }
+}

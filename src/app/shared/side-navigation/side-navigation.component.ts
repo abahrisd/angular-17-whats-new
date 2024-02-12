@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { NavigationListItem } from './side-navigation.model'
 import { RouterLink, RouterLinkActive } from '@angular/router'
+import { NgClass } from '@angular/common'
 
 @Component({
   selector: 'awn-side-navigation',
@@ -14,6 +15,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router'
     MatIconModule,
     RouterLink,
     RouterLinkActive,
+    NgClass,
   ],
   templateUrl: './side-navigation.component.html',
   styleUrl: './side-navigation.component.scss',
