@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router'
+import { RouterOutlet } from '@angular/router'
 import { CommonModule } from '@angular/common'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatButtonModule } from '@angular/material/button'
@@ -18,7 +18,7 @@ import { SideNavigationComponent } from './shared/side-navigation/side-navigatio
     SideNavigationComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'angular-17-whats-new'
@@ -43,7 +43,6 @@ export class AppComponent {
   ]
 
   public toggleNavigationOpenedState() {
-    console.log('toggleNavigationOpenedState')
     this.isNavigationOpened = !this.isNavigationOpened
   }
 }

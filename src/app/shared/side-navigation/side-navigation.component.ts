@@ -16,7 +16,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router'
     RouterLinkActive,
   ],
   templateUrl: './side-navigation.component.html',
-  styleUrl: './side-navigation.component.css',
+  styleUrl: './side-navigation.component.scss',
 })
 export class SideNavigationComponent {
   @Input() navigationConfig: NavigationListItem[] = []
