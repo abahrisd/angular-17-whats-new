@@ -9,14 +9,13 @@
     <mat-nav-list>
       @for (navItem of navigationConfig; track navItem.title) {
         <mat-list-item class="flex flex-row">
-          <div class="flex flex-row items-center justify-end">
-            <a
-              class="cursor-pointer p-2 text-lg"
-              routerLink="{{ navItem.routerLink }}"
-              routerLinkActive="active"
-              ariaCurrentWhenActive="page"
-              >{{ navItem.title }}</a
-            >
+          <div
+            class="flex flex-row items-center justify-end"
+            routerLink="{{ navItem.routerLink }}"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            {{ navItem.title }}
             <mat-icon mat-list-icon class="ml-4">{{ navItem.icon }}</mat-icon>
           </div>
         </mat-list-item>
